@@ -15,3 +15,19 @@ gwt-unitCache/
 war/WEB-INF/deploy/
 war/WEB-INF/classes/
 
+
+.DS_Store
+
+CraftGarden/.apt_generated2/*
+
+CraftGarden/.gwt/*
+CraftGarden/src/main/webapp/CraftGarden/.junit_symbolMaps/*
+
+CraftGarden/src/main/webapp/CraftGarden/*
+
+CraftGarden/src/main/webapp/FormRenderer/*
+CraftGarden/target/*
+*/classes/*
+
+gwt-bootstrap/src/main/webapp/WEB-INF/classes/*
+ui-common/target/*

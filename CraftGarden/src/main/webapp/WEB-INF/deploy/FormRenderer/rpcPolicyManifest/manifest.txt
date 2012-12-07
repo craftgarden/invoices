@@ -1,0 +1,3 @@
+# Module FormRenderer
+# RPC service class, partial path of RPC policy file
+com.google.gwt.logging.shared.RemoteLoggingService, 3B1F424717712A05A66D93C1241BFAAA.gwt.rpc

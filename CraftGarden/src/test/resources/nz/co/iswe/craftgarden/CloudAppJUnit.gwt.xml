@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <!-- Inherit our applications main module.                      -->
+  <inherits name='nz.co.iswe.craftgarden.CloudApp' />
+
+  <!-- Specify the path to any remote services.                   -->
+  <servlet path="/CloudApp/greet" class="nz.co.iswe.craftgarden.server.GreetingServiceImpl" />
+
+</module>

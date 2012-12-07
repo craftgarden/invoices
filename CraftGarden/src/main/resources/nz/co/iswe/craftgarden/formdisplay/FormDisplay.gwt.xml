@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='FormRenderer'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User' />
+  <inherits name="com.google.gwt.i18n.I18N"/>
+	
+  <!-- GWT Request Factory -->
+  <inherits name='com.google.web.bindery.requestfactory.RequestFactory' />
+  
+  <!-- GWT MVP Support -->
+  <inherits name='com.google.gwt.place.Place' />
+  <inherits name='com.google.gwt.activity.Activity' />
+
+  <!-- We need the JUnit module in the main module,               -->
+  <!-- otherwise eclipse complains (Google plugin bug?)           -->
+  <inherits name='com.google.gwt.junit.JUnit' />
+   
+  <!-- Other module inherits                                      -->
+  
+  <!--  GWT Bootstrap -->
+  <inherits name="com.github.gwtbootstrap.Bootstrap" />
+  <inherits name="com.github.gwtbootstrap.datepicker.Datepicker" />
+  
+  <set-property name="bootstrap.responsiveDesign" value="false"/>
+  
+  <!-- Common UI -->
+  <inherits name="nz.co.iswe.craftgarden.common.ui.CommonUI"/>
+    
+  <!-- CraftGarden App -->
+  <inherits name="nz.co.iswe.craftgarden.CraftGarden" />
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client' />
+  <source path='shared' />
+
+</module>

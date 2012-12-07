@@ -1,0 +1,430 @@
+<!--
+
+     Copyright 2012 GWT-Bootstrap
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+
+-->
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
+	<g:HTMLPanel>
+
+		<b:ResponsiveNavbar position="TOP">
+			<b:Brand>Bootstrap</b:Brand>
+			<b:NavCollapse>
+				<b:Nav>
+					<b:NavLink>Test</b:NavLink>
+					<b:NavText>NavText</b:NavText>
+					<b:VerticalDivider />
+					<b:NavLink href="http://www.google.com">Another Test</b:NavLink>
+					<b:Dropdown text="Dropdown">
+						<b:NavHeader>Test</b:NavHeader>
+						<b:NavLink>Test 1</b:NavLink>
+						<b:NavLink>Test 2</b:NavLink>
+					</b:Dropdown>
+					<b:NavWidget icon="STAR" iconColor="WHITE" text="Inbox"
+						ui:field="inbox">
+						<b:Badge>1</b:Badge>
+					</b:NavWidget>
+<!-- 					<b:NavbarButton>Button</b:NavbarButton> -->
+				</b:Nav>
+				<b:NavForm size="1" />
+				<b:Nav alignment="RIGHT">
+					<b:NavLink>Test</b:NavLink>
+				</b:Nav>
+<!-- 				<b:Button type ="INVERSE">Button</b:Button> -->
+				<b:NavText alignment="RIGHT">Right</b:NavText>
+				<b:NavSearch size="2" placeholder="Search" alignment="RIGHT" />
+			</b:NavCollapse>
+		</b:ResponsiveNavbar>
+
+		<b:Container>
+			<b:Heading size="2">UiBinder Examples</b:Heading>
+
+			<b:NavList hideOn="TABLET">
+				<b:NavHeader>Header</b:NavHeader>
+				<b:NavLink active="true" icon="PLANE">Test</b:NavLink>
+				<b:NavWidget text="Inbox">
+					<b:Badge>1</b:Badge>
+				</b:NavWidget>
+				<b:Divider />
+				<b:NavLink href="http://www.google.com">Another Test</b:NavLink>
+			</b:NavList>
+
+			<b:WellNavList showOn="TABLET">
+				<b:NavHeader>Header</b:NavHeader>
+				<b:NavLink active="true" icon="PLANE">Test</b:NavLink>
+				<b:Divider />
+				<b:NavLink href="http://www.google.com">Another Test</b:NavLink>
+			</b:WellNavList>
+
+			<b:Popover text="testpopover" heading="some title"
+				hideDelay="5000">
+				<b:Button ui:field="button" icon="HEART" type="INFO" size="MINI">Testbutton</b:Button>
+			</b:Popover>
+			<b:Popover text="other popover" heading="other title"
+				placement="TOP">
+				<b:Button icon="LEAF" type="DANGER" size="MINI">Testbutton</b:Button>
+			</b:Popover>
+			<b:Tooltip tooltip="The tooltip">Some text</b:Tooltip>
+			<b:Tooltip tooltip="Another tooltip" animation="false"
+				hideDelay="5000" placement="RIGHT">Some more text</b:Tooltip>
+			<b:Blockquote source="Me" pullRight="true">This is a
+				blockquote.</b:Blockquote>
+			<g:HorizontalPanel>
+				<b:ButtonGroup>
+					<b:Button href="http://www.google.com">1</b:Button>
+					<b:Button>2</b:Button>
+					<b:Button>3</b:Button>
+				</b:ButtonGroup>
+				<b:ButtonGroup>
+					<b:Button href="http://www.google.com">1</b:Button>
+					<b:Button>2</b:Button>
+					<b:Button>3</b:Button>
+				</b:ButtonGroup>
+			</g:HorizontalPanel>
+			<g:VerticalPanel>
+				<b:ButtonGroup>
+					<b:Button href="http://www.google.com">1</b:Button>
+					<b:Button>2</b:Button>
+					<b:Button>3</b:Button>
+				</b:ButtonGroup>
+				<b:ButtonGroup>
+					<b:Button href="http://www.google.com">1</b:Button>
+					<b:Button>2</b:Button>
+					<b:Button>3</b:Button>
+				</b:ButtonGroup>
+			</g:VerticalPanel>
+			<b:ButtonToolbar>
+				<b:ButtonGroup>
+					<b:Button href="http://www.google.com">1</b:Button>
+					<b:Button>2</b:Button>
+					<b:Button>3</b:Button>
+				</b:ButtonGroup>
+				<b:ButtonGroup>
+					<b:Button>4</b:Button>
+				</b:ButtonGroup>
+				<b:Button>5</b:Button>
+				<b:DropdownButton text="6">
+					<b:NavLink href="#test">Test 1</b:NavLink>
+					<b:NavLink>Test 2</b:NavLink>
+				</b:DropdownButton>
+				<b:SplitDropdownButton text="7">
+					<b:NavLink href="#test">Test 1</b:NavLink>
+					<b:NavLink>Test 2</b:NavLink>
+				</b:SplitDropdownButton>
+
+			</b:ButtonToolbar>
+			<g:HTMLPanel>
+				Hello
+				<b:Abbreviation title="You">u</b:Abbreviation>
+				, that's
+				<b:Emphasis>me!</b:Emphasis>
+				Icon:
+				<b:Icon type="STAR" />
+				:-). Invisible:
+				<b:Icon type="HEART" color="WHITE" />
+				;-).
+				Strong:
+				<b:Strong>Hey!</b:Strong>
+
+				Close Icon:
+				<b:Close />
+
+				Badge:
+				<b:Badge type="ERROR">2</b:Badge>
+				.
+				<b:Badge>2</b:Badge>
+
+				Label:
+				<b:Label>Normal label</b:Label>
+				,
+				<b:Label type="INFO">Info label</b:Label>
+				<g:Button>GWT-Button</g:Button>
+				<br />
+				<br />
+			</g:HTMLPanel>
+			<b:Container>
+<!-- 				<b:UnorderedList> -->
+<!-- 					<b:ListItem> -->
+<!-- 						<g:Anchor>Test</g:Anchor> -->
+<!-- 					</b:ListItem> -->
+<!-- 					<b:ListItem> -->
+<!-- 						<g:Label>Another Test</g:Label> -->
+<!-- 					</b:ListItem> -->
+<!-- 				</b:UnorderedList> -->
+				<b:Pager left="Left" right="Right" />
+				<b:Pager left="&larr; Older" right="Newer &rarr;" aligned="true" />
+
+				<b:Row>
+					<b:Column size="2">
+						<b:Pagination alignment="LEFT">
+							<b:NavLink href="http://www.google.com">1</b:NavLink>
+							<b:NavLink active="true">2</b:NavLink>
+							<b:NavLink disabled="true">3</b:NavLink>
+						</b:Pagination>
+					</b:Column>
+					<b:Column size="2">
+						<b:NavTabs>
+							<b:NavLink>1</b:NavLink>
+							<b:NavLink active="true">2</b:NavLink>
+							<b:NavLink disabled="true">3</b:NavLink>
+						</b:NavTabs>
+					</b:Column>
+					<b:Column size="2">
+						<b:NavPills stacked="true">
+							<b:NavLink>1</b:NavLink>
+							<b:NavLink active="true">2</b:NavLink>
+							<b:NavLink disabled="true">3</b:NavLink>
+						</b:NavPills>
+					</b:Column>
+					<b:Column size="2">
+						<b:TabPanel>
+							<b:TabPane heading="prost" active="true">
+								<g:Label>Lalala</g:Label>
+							</b:TabPane>
+							<b:TabPane heading="test">
+								<g:Label>Huhu</g:Label>
+							</b:TabPane>
+						</b:TabPanel>
+					</b:Column>
+					<b:Column size="2">
+						<b:TabPanel tabPosition="right">
+							<b:TabPane heading="prost">
+								<g:Label>Lalala</g:Label>
+							</b:TabPane>
+							<b:TabPane heading="test" href="2">
+								<g:Label>Huhu</g:Label>
+							</b:TabPane>
+						</b:TabPanel>
+					</b:Column>
+				</b:Row>
+			</b:Container>
+
+			<b:Heading size="4" subtext="subtext">Heading</b:Heading>
+			<b:Code lang="scala">
+				class ScalaExample
+			</b:Code>
+
+			<b:Code>
+				<a href="www.google.com">Testlink</a>
+			</b:Code>
+			<b:CodeBlock linenums="true">
+				public class Person { \n
+				\n
+				private
+				final String name;
+				\n
+				private final int age;
+				\n
+				}
+			</b:CodeBlock>
+			<b:FluidContainer>
+				<b:Row>
+					<b:Column size="2">
+						<g:Label>I'm a Label inside a fluid container...</g:Label>
+					</b:Column>
+					<b:Column size="2" offset="2">
+						<g:Label>Me too!</g:Label>
+					</b:Column>
+				</b:Row>
+				<b:FluidRow>
+					<b:Column size="2">
+						<g:Label>I'm in a Fluid row...</g:Label>
+					</b:Column>
+					<b:Column size="2" offset="2">
+						<g:Label>Me too!</g:Label>
+					</b:Column>
+					<b:Column size="2">
+						<b:PageHeader subtext="And this is the subtext.">This is the header</b:PageHeader>
+					</b:Column>
+				</b:FluidRow>
+				<b:FluidRow>
+					<b:Column size="2">
+						<b:ProgressBar percent="20" />
+					</b:Column>
+					<b:Column size="2">
+						<b:ProgressBar type="STRIPED" percent="40" />
+					</b:Column>
+					<b:Column size="2">
+						<b:ProgressBar type="ANIMATED" percent="60" />
+					</b:Column>
+				</b:FluidRow>
+				<b:FluidRow>
+					<b:Column size="3">
+						<b:Alert type="ERROR" animation="true">
+							TestAlert with
+							<b>html</b>
+						</b:Alert>
+					</b:Column>
+					<b:Column size="3">
+						<b:Alert type="SUCCESS" heading="Hm..." close="false">TestAlert
+							without close</b:Alert>
+					</b:Column>
+					<b:Column size="3">
+						<b:AlertBlock type="INFO" heading="Heading">AlertBlock</b:AlertBlock>
+					</b:Column>
+				</b:FluidRow>
+				<b:Row>
+					<b:Column size="6">
+						<b:Hero>
+							<b:Heading size="2">Hero Unit</b:Heading>
+							<b:Paragraph>Some Text for the Hero Unit.</b:Paragraph>
+							<b:Paragraph>More text.</b:Paragraph>
+							<b:Paragraph>Contains HTML <a href="#">text.</a></b:Paragraph>
+							<b:Paragraph>Contains Widget <b:Code>Code</b:Code>.</b:Paragraph>
+						</b:Hero>
+					</b:Column>
+					<b:Column size="2" offset="2">
+						<g:Label>Me too!</g:Label>
+					</b:Column>
+				</b:Row>
+				<b:Row>
+					<b:Column size="3">
+						<b:NavPills>
+							<b:Dropdown text="Dropdown example">
+								<b:NavLink href="#modal">Test 1</b:NavLink>
+								<b:NavLink>Test 2</b:NavLink>
+								<b:NavLink>Test 3</b:NavLink>
+								<b:NavLink>Test 4</b:NavLink>
+								<b:NavLink>Test 5</b:NavLink>
+							</b:Dropdown>
+						</b:NavPills>
+					</b:Column>
+					<b:Column size="3">
+						<b:DropdownButton dropup="true" size="MINI"
+							text="Dropup example">
+							<b:NavLink href="#test">Test 1</b:NavLink>
+							<b:NavLink>Test 2</b:NavLink>
+						</b:DropdownButton>
+						<b:SplitDropdownButton ui:field="splitDropdownButton"
+							icon="PLANE" text="Dropdown example">
+							<b:NavLink href="#test">Test 1</b:NavLink>
+							<b:NavLink>Test 2</b:NavLink>
+						</b:SplitDropdownButton>
+					</b:Column>
+				</b:Row>
+			</b:FluidContainer>
+			<b:Section target="modal">
+				<b:Button icon="HEART" type="INFO" ui:field="modalBtn">Show modal</b:Button>
+				<b:Button icon="HEART" type="INFO" enabled="false"
+					ui:field="anotherModalBtn">Show anothermodal</b:Button>
+			</b:Section>
+			<b:Footer>
+				<g:Label>Some Text and a </g:Label>
+				<b:Button>Button</b:Button>
+			</b:Footer>
+			<b:Modal title="My Modal" backdrop="NONE"
+				keyboard="true" animation="true" ui:field="modal">
+				<g:Label>Modal Content!</g:Label>
+				<b:Button ui:field="contentButton" icon="FILE" iconColor="WHITE"
+					type="PRIMARY">Save</b:Button>
+				<b:ModalFooter>
+					<b:Button ui:field="saveButton" icon="FILE" iconColor="WHITE"
+						type="PRIMARY">Save</b:Button>
+				</b:ModalFooter>
+			</b:Modal>
+			<b:Well>
+				Well can contains HTML tag.<br/>
+				<a href="#">anchor</a><br/>
+				with widget<b:Code>Code</b:Code>.
+			</b:Well>
+			
+			<b:Form type="HORIZONTAL">
+				<b:Fieldset>
+					<b:Legend>Legend can include any widget and tag <b:Strong> Strong </b:Strong><small> small </small></b:Legend>
+					<b:ControlGroup>
+						<b:ControlLabel>controlLabel can include any widget ang tag <a>href</a> <b:Code>code</b:Code></b:ControlLabel>
+						<b:Controls>
+							<b:RadioButton name="radio">radio 1</b:RadioButton>
+							<b:RadioButton name="radio">radio 2</b:RadioButton>
+							<b:RadioButton name="radio">radio 3</b:RadioButton>
+							<b:HelpBlock>Help Block can include any widget and tag <b:Strong> Strong </b:Strong> and <a>a tag</a></b:HelpBlock>
+						</b:Controls>
+					</b:ControlGroup>
+					<b:ControlGroup>
+						<b:ControlLabel>inline checkboxes</b:ControlLabel>
+						<b:Controls>
+							<b:RadioButton name="radio2" inline="true">1</b:RadioButton>
+							<b:RadioButton name="radio2" inline="true">2</b:RadioButton>
+							<b:RadioButton name="radio2" inline="true">3</b:RadioButton>
+							<b:HelpBlock>Help Block can include any widget and tag <b:Strong> Strong </b:Strong> and <a>a tag</a></b:HelpBlock>
+						</b:Controls>
+					</b:ControlGroup>
+					<b:ControlGroup>
+						<b:ControlLabel>controlLabel can include any widget ang tag <a>href</a> <b:Code>code</b:Code></b:ControlLabel>
+						<b:Controls>
+							<b:CheckBox>checkbox 1</b:CheckBox>
+							<b:CheckBox>checkbox 2</b:CheckBox>
+							<b:CheckBox>checkbox 3</b:CheckBox>
+							<b:HelpBlock>Help Block can include any widget and tag <b:Strong> Strong </b:Strong> and <a>a tag</a></b:HelpBlock>
+						</b:Controls>
+					</b:ControlGroup>
+					<b:ControlGroup>
+						<b:ControlLabel>inline checkboxes</b:ControlLabel>
+						<b:Controls>
+							<b:CheckBox inline="true">1</b:CheckBox>
+							<b:CheckBox inline="true">2</b:CheckBox>
+							<b:CheckBox inline="true">3</b:CheckBox>
+							<b:HelpBlock>Help Block can include any widget and tag <b:Strong> Strong </b:Strong> and <a>a tag</a></b:HelpBlock>
+						</b:Controls>
+					</b:ControlGroup>
+					<b:ControlGroup>
+						<b:ControlLabel>controlLabel can include any widget ang tag <a>href</a> <b:Code>code</b:Code></b:ControlLabel>
+						<b:Controls>
+							<b:TextBox placeholder="can set placeholder"/>
+							<b:HelpBlock>Help Block can include any widget and tag <b:Strong> Strong </b:Strong> and <a>a tag</a></b:HelpBlock>
+						</b:Controls>
+					</b:ControlGroup>
+					<b:ControlGroup>
+						<b:ControlLabel>controlLabel</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox placeholder="set a placeholder text"/>
+							<b:HelpInline>Help Inline can not include any widget and tag(only text)</b:HelpInline>
+						</b:Controls>
+					</b:ControlGroup>
+					<b:ControlGroup type="ERROR">
+						<b:ControlLabel>control error type</b:ControlLabel>
+						<b:Controls>
+							<b:TextBox placeholder="error design"/>
+							<b:HelpInline>on error</b:HelpInline>
+						</b:Controls>
+					</b:ControlGroup>
+					<b:ControlGroup type="SUCCESS">
+						<b:ControlLabel>control success type</b:ControlLabel>
+						<b:Controls>
+							<b:InputAddOn prependIcon="STAR" appendIcon="STAR">
+								<b:TextBox placeholder="add on style"/>
+							</b:InputAddOn>
+							<b:HelpInline>on success</b:HelpInline>
+						</b:Controls>
+					</b:ControlGroup>
+					<b:ControlGroup type="WARNING">
+						<b:ControlLabel>control warning type</b:ControlLabel>
+						<b:Controls>
+							<b:InputAddOn prependText="@" appendText="@">
+								<b:TextBox placeholder="add on style"/>
+							</b:InputAddOn>
+							<b:HelpBlock>help block on warning</b:HelpBlock>
+						</b:Controls>
+					</b:ControlGroup>
+					<b:FormActions>
+						<b:Button>button</b:Button>
+						<b:Button>button</b:Button>
+					</b:FormActions>
+				</b:Fieldset>
+			</b:Form>
+		</b:Container>
+	</g:HTMLPanel>
+</ui:UiBinder> 

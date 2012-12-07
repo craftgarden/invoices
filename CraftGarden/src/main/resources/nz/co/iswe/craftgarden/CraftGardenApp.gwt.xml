@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='CraftGarden'>
+  
+  <!-- Form Renderer -->
+  <inherits name="nz.co.iswe.craftgarden.CraftGarden" />
+  
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='nz.co.iswe.craftgarden.client.CraftGardenApp' />
+  
+  <!-- Use ClientFactoryImpl by default -->
+  <replace-with class="nz.co.iswe.craftgarden.client.ClientFactoryImpl">
+    <when-type-is class="nz.co.iswe.craftgarden.client.ClientFactory"/>
+  </replace-with>
+
+</module>
